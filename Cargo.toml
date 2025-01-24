@@ -1,0 +1,24 @@
+[workspace]
+members = [
+ "component_templates/tex",
+ "component_templates/coin",
+ "development_tools/scripts",
+ "clients/tex-desktop",
+ "clients/tex-desktop/src-tauri",
+ "libraries/tari_exchange",
+ "libraries/tari_all_in_one_rust_sdk"
+]
+
+[workspace.dependencies]
+tari_all_in_one_rust_sdk = { path = "libraries/tari_all_in_one_rust_sdk" }
+tari_exchange = { path = "libraries/tari_exchange" }
+tari_bor = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69", features = ["json_encoding"] }
+tari_indexer_client = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+tari_engine_types = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+tari_template_abi = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+tari_template_lib = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+tari_transaction = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+tari_wallet_daemon_client = { git = "https://github.com/humb1t/tari-dan.git", rev = "20069213f87bd53f0f9debc5525560724703ee69" }
+derive_more = { version = "1.0.0", features = ["full"] }
+hickory-proto = { version = "=0.25.0-alpha.2" }
+tokio = { version = "1.40.0", features = ["rt", "rt-multi-thread", "macros"] }

@@ -1,0 +1,17 @@
+[package]
+name = "tex"
+version = "0.1.0"
+authors = ["Nikita Puzankov <git@bshn.rs>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tari_template_abi.workspace = true
+tari_template_lib.workspace = true
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+num-traits = "0.2.19"
+bounded-integer = { version = "0.5.7", features = ["types", "serde1", "num-traits02"] }
+
+[lib]
+crate-type = ["cdylib", "lib"]

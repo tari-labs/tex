@@ -1,0 +1,7 @@
+.logo.tari:hover {
+  filter: drop-shadow(0 0 2em #f8b94c);
+}
+
+.token-list ul li b {
+  display: none
+}
